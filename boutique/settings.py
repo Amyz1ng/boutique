@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-&m(wukr8qc30cfe(%2to5ba5$1mwlg8b=1ck=c0$36bdi-l97-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-amyz1ng-boutique-w2fn8is7658.ws-eu107.gitpod.io']
+ALLOWED_HOSTS = ['8000-amyz1ng-boutique-r06qgz91xrj.ws-eu107.gitpod.io']
 
 # Application definition
 
@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -74,8 +75,11 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 
     # 'allauth' specific authentication methods, such as login by e-mail
-    'alauth.account.auth_backends.AuthenticationBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
 )
+
+SITE_ID = 1
+
 WSGI_APPLICATION = 'boutique.wsgi.application'
 
 
